@@ -1,0 +1,25 @@
+•sudo apt update (updating packages)
+•sudo apt-get upgrade (upgrading packages)
+•sudo nano /etc/hostname (need to  have hostname for nextcloud)
+•sudo reboot (it is better to reboot,for being sure that changes were saved)
+•wget https://download.nextcloud.com/server/releases/latest.zip  (it's better to install with .zip file)
+Note: if you don't have "zip"
+1)sudo apt-get -y install zip
+2)sudo aptitude -y install zip (those who use aptitude)
+
+•sudo nano /etc/hosts (you will need to add your nextcloud hostname,loopback address even if you don't have a website,you can check config.png , yellow ma
+•sudo apt install mariadb-server (install the mariadb-server package)
+csudo systemctl status mariadb (checking the status of the mariadb)
+Note: if there's any issue,you can type  this command " sudo systemctl enable mariadb" and check again.
+
+•sudo mysql_secure_installation (making some security for for MariaDB)
+•sudo mariadb (we’ll create the database we’ll be using for Nextcloud)
+CREATE DATABASE nextcloud;
+SHOW DATABASES; 
+GRANT ALL PRIVILEGES ON nextcloud.* TO 'nextcloud'@'localhost' IDENTIFIED BY 'mypassword';
+FLUSH PRIVILEGES; (CTRL + D = to exit)
+
+•sudo apt install php php-apcu php-bcmath php-cli php-common php-curl php-gd php-gmp php-imagick php-intl php-mbstring php-mysql php-zip php-xml(Apache Webserver Setup
+Installing the required packages to open Apache)
+•systemctl status apache2 (checking status of apache2)
+•sudo phpenmod bcmath gmp imagick intl (enabling php extensions)
