@@ -1,6 +1,7 @@
 # Nextcloud
 Nextcloud is a suite of client-server software for creating and using file hosting services.(Cloud)
-###################################################################################################################################################################
+#![download](https://user-images.githubusercontent.com/105795532/222920100-a109cb7a-3029-4595-8914-1fdc3b3cd752.png)
+
 Nextcloud is an open-source, self-hosted file sharing and collaboration platform that provides a secure and private alternative to centralized cloud services. With Nextcloud, you can easily store, sync, and share your files, contacts, calendars, and more across different devices and platforms.
 
 -Nextcloud offers a range of features and benefits that make it a compelling solution for individuals, businesses, and organizations:
