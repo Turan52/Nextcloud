@@ -1,0 +1,21 @@
+Note: After, you've done instruction you should add your ip or domain name(if you have it), on the search bar of the web browser.
+In my case this is FireFox Browser. If it didn't work,and you didn't get any output,here are commands to find the problem.
+
+1) sudo apachectl configtest (If it gives "Syntax is Ok" and again the same issue,try other steps)
+2)sudo tail -n 2 /var/log/apache2/error.log (Log files  which is incredibly useful for troubleshooting any issue)
+3) sudo systemctl status apache2 (checking if apache2 is active)
+4)sudo systemctl restart apache2 (restarting apache2)
+Then, check the status again.
+
+Output for apache2(systemctl status apache2):
+Output
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Tue 2023-03-05 13:17:36 UTC; 2s ago
+     Docs: man:httpd.service(8)
+ Main PID: 21217 (httpd)
+   Status: "Started, listening on: port 80"
+    Tasks: 178 (limit: 2881)
+   Memory: 24.8M
+   CGroup: /system.slice/httpd.service
+           ├─21217 /usr/sbin/httpd -DFOREGROUND
