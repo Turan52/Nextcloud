@@ -1,0 +1,13 @@
+•ls -ltr  (listing all files)
+•unzip latest.zip (unzipping latest.zip)
+•mv nextcloud nextcloud.linux.cloud (in my case,I changed file name but for default it should be just "nextcloud"")
+•sudo chown -R www-data:www-data nextcloud.linux(File Name).cloud
+•sudo a2dissite 000-default.conf (it will shut down default page of apache,for nextcloud page showing up)
+
+Note: Host Configuration file for Nextcloud is one of the most essential parts creating nextcloud, one small mistake can lead to different problems in apache2.
+Including Nexxtcloud requires minimum PHP 7.4
+•sudo nano /etc/php/8.1/apache2/php.ini (php version depends on your ubuntu/kubuntu/redhat etc. systems,you can check your machine version using this command "cat /etc/os-release")
+
+Note: PHP config changes including further information is inside PHP file.
+
+
